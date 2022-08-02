@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = Number(prompt(' nhap so nguyen ban muon'))
+    function sumOfListPrime(x) {
+        let sum = 0;
+        let arrPri = new Array()
+        if (x == 2)
+            sum += x
+        else if (x < 2)
+            sum = 0
+        else {
+                sum = 2
+                for (let i = 3; i <= x; i++){
+                    arrPri.push(i)
+            }
+        }
+        for (let i = 0; i < arrPri.length;i++){
+            for (let j = 2; j <= Math.sqrt(arrPri[i]); j++){
+                if (arrPri[i] % j == 0){
+                    arrPri.splice(i,1)
+                    i = 0;
+                }
+            }
+        }
+        for ( let k = 0; k< arrPri.length; k++){
+            sum += arrPri[k]
+        }
+        return sum
+    }
+    document.write(sumOfListPrime(x))
+
+
+
+</script>
+
+</body>
+</html>

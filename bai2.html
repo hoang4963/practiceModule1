@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function insertNumberToArray(arr,x,index) {
+        let arrNew = new Array()
+        if (index < 0 || index > arr.length){
+            arrNew = arr
+        }
+        else {
+            for (let i = 0; i <index ; i++){
+                arrNew.push(arr[i])
+            }
+            arrNew.push(x)
+        }
+            for (let i = arr.length; i > index; i--) {
+               arrNew[i]= arr[i-1]
+        }
+        return arrNew
+    }
+    let newArr = [1,3,5,7,9];
+    console.log(insertNumberToArray(newArr,5,2))
+</script>
+
+</body>
+</html>
