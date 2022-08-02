@@ -20,7 +20,7 @@
             this.height = height;
             this.color = color;
         }
-        render(text) {
+        render() {
           ctx.beginPath();
           ctx.fillStyle = this.color;
           ctx.fillRect(this.x,this.y,this.width,this.height);
@@ -43,7 +43,7 @@
         }
     }
     let rectangle = new Rectangle(10,10,240,400,'#FF0060')
-    rectangle.setColor('#AA0031')
+    rectangle.setColor('#AA1345')
     rectangle.render()
 
 </script>
